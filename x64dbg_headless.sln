@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x64dbg_headless", "x64dbg_headless\x64dbg_headless.vcxproj", "{D65E1831-DF2D-4C74-B370-2A3038998886}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Debug|x64.ActiveCfg = Debug|x64
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Debug|x64.Build.0 = Debug|x64
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Debug|x86.ActiveCfg = Debug|Win32
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Debug|x86.Build.0 = Debug|Win32
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Release|x64.ActiveCfg = Release|x64
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Release|x64.Build.0 = Release|x64
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Release|x86.ActiveCfg = Release|Win32
+		{D65E1831-DF2D-4C74-B370-2A3038998886}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB28B7F5-1B7B-46AC-B8D7-FBEF7D778077}
+	EndGlobalSection
+EndGlobal

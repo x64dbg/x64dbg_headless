@@ -1,0 +1,12 @@
+Release/
+Debug/
+x64/
+Win32/
+.vs/
+*.vcxproj.user
+*.sdf
+*.suo
+.vs/
+Release/
+Debug/
+x64/
