@@ -37,6 +37,19 @@ BOOL WINAPI DllMain(
     _In_ LPVOID    lpvReserved
     )
 {
+    if (fdwReason == DLL_PROCESS_ATTACH)
+    {
+        if (AllocConsole())
+        {
+            FILE* ptrNewStdIn = nullptr;
+            FILE* ptrNewStdOut = nullptr;
+            FILE* ptrNewStdErr = nullptr;
+
+            freopen_s(&ptrNewStdIn, "CONIN$", "r", stdin);
+            freopen_s(&ptrNewStdOut, "CONOUT$", "w", stdout);
+            freopen_s(&ptrNewStdErr, "CONOUT$", "w", stderr);
+        }
+    }
     return TRUE;
 }
 
