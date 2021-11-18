@@ -39,16 +39,7 @@ BOOL WINAPI DllMain(
 {
     if (fdwReason == DLL_PROCESS_ATTACH)
     {
-        if (AllocConsole())
-        {
-            FILE* ptrNewStdIn = nullptr;
-            FILE* ptrNewStdOut = nullptr;
-            FILE* ptrNewStdErr = nullptr;
-
-            freopen_s(&ptrNewStdIn, "CONIN$", "r", stdin);
-            freopen_s(&ptrNewStdOut, "CONOUT$", "w", stdout);
-            freopen_s(&ptrNewStdErr, "CONOUT$", "w", stderr);
-        }
+        
     }
     return TRUE;
 }
@@ -70,6 +61,18 @@ struct GuiState
 
 extern "C" __declspec(dllexport) int _gui_guiinit(int argc, char* argv[])
 {
+    // Allocate console
+    if (AllocConsole())
+    {
+        FILE* ptrNewStdIn = nullptr;
+        FILE* ptrNewStdOut = nullptr;
+        FILE* ptrNewStdErr = nullptr;
+
+        freopen_s(&ptrNewStdIn, "CONIN$", "r", stdin);
+        freopen_s(&ptrNewStdOut, "CONOUT$", "w", stdout);
+        freopen_s(&ptrNewStdErr, "CONOUT$", "w", stderr);
+    }
+
     // Init debugger
     const char* errormsg = DbgInit();
     if(errormsg)
